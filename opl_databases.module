@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the opl_databases feature.
+ */
+
+include_once 'opl_databases.features.inc';
