@@ -168,7 +168,7 @@ function opl_databases_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'hidden',
-    'formatter' => 'link_url',
+    'formatter' => 'formatted_database_link',
     'delta_limit' => 0,
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
@@ -490,7 +490,7 @@ function opl_databases_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'hidden',
-    'formatter' => 'link_url',
+    'formatter' => 'formatted_database_link',
     'delta_limit' => 0,
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
@@ -520,7 +520,7 @@ function opl_databases_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'hidden',
-    'formatter' => 'entityreference_label',
+    'formatter' => 'database_subjects',
     'delta_limit' => '0',
     'delta_offset' => '0',
     'delta_reversed' => 0,
@@ -534,9 +534,9 @@ function opl_databases_default_page_manager_handlers() {
       'colorbox_node_height' => '600',
     ),
     'context' => 'argument_entity_id:node_1',
-    'override_title' => 0,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
+    'override_title' => 1,
+    'override_title_text' => 'More like this',
+    'override_title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -564,9 +564,9 @@ function opl_databases_default_page_manager_handlers() {
     'delta_reversed' => 0,
     'formatter_settings' => array(),
     'context' => 'argument_entity_id:node_1',
-    'override_title' => 0,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
+    'override_title' => 1,
+    'override_title_text' => 'Help guide',
+    'override_title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(

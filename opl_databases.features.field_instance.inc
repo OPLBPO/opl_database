@@ -36,6 +36,12 @@ function opl_databases_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'resource_title_help' => array(
         'label' => 'above',
         'settings' => array(),
@@ -113,6 +119,12 @@ function opl_databases_field_default_field_instances() {
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 18,
       ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'resource_title_help' => array(
         'label' => 'above',
         'settings' => array(),
@@ -182,6 +194,12 @@ function opl_databases_field_default_field_instances() {
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 16,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'resource_title_help' => array(
         'label' => 'above',
@@ -257,6 +275,12 @@ function opl_databases_field_default_field_instances() {
         'settings' => array(),
         'type' => 'link_default',
         'weight' => 5,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -356,6 +380,12 @@ function opl_databases_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
@@ -465,6 +495,12 @@ function opl_databases_field_default_field_instances() {
         'type' => 'link_default',
         'weight' => 13,
       ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'resource_title_help' => array(
         'label' => 'above',
         'settings' => array(),
@@ -530,7 +566,7 @@ function opl_databases_field_default_field_instances() {
   // Exported field_instance: 'node-database-field_image_feature_box'.
   $field_instances['node-database-field_image_feature_box'] = array(
     'bundle' => 'database',
-    'default_value' => '',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -555,6 +591,12 @@ function opl_databases_field_default_field_instances() {
         ),
         'type' => 'image',
         'weight' => -1,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -740,6 +782,12 @@ function opl_databases_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 6,
       ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'list',
@@ -863,6 +911,12 @@ function opl_databases_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 15,
       ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'resource_title_help' => array(
         'label' => 'above',
         'settings' => array(),
@@ -956,6 +1010,12 @@ function opl_databases_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1084,6 +1144,12 @@ function opl_databases_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 8,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1216,6 +1282,12 @@ function opl_databases_field_default_field_instances() {
         'type' => 'link_default',
         'weight' => 17,
       ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'resource_title_help' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1308,6 +1380,12 @@ function opl_databases_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 4,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'inline',
@@ -1409,6 +1487,12 @@ function opl_databases_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 2,
       ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'list',
@@ -1495,6 +1579,12 @@ function opl_databases_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 3,
       ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'full' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -1579,6 +1669,12 @@ function opl_databases_field_default_field_instances() {
         'type' => 'list_default',
         'weight' => 12,
       ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'resource_title_help' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1647,6 +1743,12 @@ function opl_databases_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 14,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'resource_title_help' => array(
         'label' => 'above',
@@ -1769,6 +1871,12 @@ function opl_databases_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 10,
       ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'resource_title_help' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1848,6 +1956,12 @@ function opl_databases_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 10,
       ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'resource_title_help' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1926,6 +2040,12 @@ function opl_databases_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 10,
       ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'resource_title_help' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2003,6 +2123,12 @@ function opl_databases_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 11,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'resource_title_help' => array(
         'label' => 'above',
