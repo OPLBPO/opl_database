@@ -192,6 +192,31 @@ function opl_databases_default_page_manager_handlers() {
   $pane->uuid = '63649d8b-270f-41d0-b718-3d2128fcb4e9';
   $display->content['new-63649d8b-270f-41d0-b718-3d2128fcb4e9'] = $pane;
   $display->panels['right'][2] = 'new-63649d8b-270f-41d0-b718-3d2128fcb4e9';
+  $pane = new stdClass();
+  $pane->pid = 'new-5ef7ac22-66af-4611-91f0-ef303ed295de';
+  $pane->panel = 'right';
+  $pane->type = 'token';
+  $pane->subtype = 'node:content-type';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'sanitize' => 1,
+    'context' => 'argument_entity_panels_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $pane->uuid = '5ef7ac22-66af-4611-91f0-ef303ed295de';
+  $display->content['new-5ef7ac22-66af-4611-91f0-ef303ed295de'] = $pane;
+  $display->panels['right'][3] = 'new-5ef7ac22-66af-4611-91f0-ef303ed295de';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-e8788139-4c5b-4f2c-aca2-7ab0d60391b1';
   $handler->conf['display'] = $display;
