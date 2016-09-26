@@ -2186,7 +2186,7 @@ function opl_databases_field_default_field_instances() {
   // Exported field_instance: 'taxonomy_term-item_formats-field_database'.
   $field_instances['taxonomy_term-item_formats-field_database'] = array(
     'bundle' => 'item_formats',
-    'default_value' => NULL,
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -2194,7 +2194,7 @@ function opl_databases_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'above',
@@ -2216,8 +2216,8 @@ function opl_databases_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 2,
+      'type' => 'options_buttons',
+      'weight' => 3,
     ),
   );
 
@@ -2226,10 +2226,10 @@ function opl_databases_field_default_field_instances() {
     'bundle' => 'item_formats',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Used to reference help guides / FAQs related to current term.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 1,
@@ -2238,7 +2238,7 @@ function opl_databases_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -2461,6 +2461,7 @@ function opl_databases_field_default_field_instances() {
   t('Title');
   t('To be used for explanatory notes, outage alerts, etc.');
   t('Unilingual resource');
+  t('Used to reference help guides / FAQs related to current term.');
   t('Vendor contact');
   t('content type');
   t('term_image');
