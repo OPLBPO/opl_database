@@ -96,7 +96,7 @@ function opl_databases_default_page_manager_handlers() {
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
     'formatter_settings' => array(
-      'title_style' => 'h2',
+      'title_style' => 'h3',
       'title_link' => 'content',
       'title_class' => '',
     ),
@@ -128,7 +128,7 @@ function opl_databases_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'hidden',
-    'formatter' => 'readmore',
+    'formatter' => 'smart_trim_format',
     'delta_limit' => 0,
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
@@ -138,7 +138,17 @@ function opl_databases_default_page_manager_handlers() {
       'readmore_show_readless' => 0,
       'readmore_ellipsis' => 1,
       'readmore_wordsafe' => 1,
-      'trim_length' => '160',
+      'trim_length' => '40',
+      'trim_type' => 'words',
+      'trim_suffix' => '...',
+      'trim_link' => '0',
+      'more_link' => '0',
+      'more_text' => 'Read more',
+      'summary_handler' => 'full',
+      'trim_options' => array(
+        'text' => 'text',
+      ),
+      'trim_preserve_tags' => '',
     ),
     'context' => 'argument_entity_panels_entity_id:node_1',
     'override_title' => 0,
