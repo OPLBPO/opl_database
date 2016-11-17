@@ -379,9 +379,20 @@ function opl_databases_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'inline',
+        'module' => 'smart_trim',
+        'settings' => array(
+          'more_link' => FALSE,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 300,
+          'trim_link' => FALSE,
+          'trim_options' => array(),
+          'trim_preserve_tags' => '',
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
+        ),
+        'type' => 'smart_trim_format',
         'weight' => 0,
       ),
       'featured_event' => array(
@@ -467,6 +478,81 @@ function opl_databases_field_default_field_instances() {
       'weight' => 0,
     ),
     'widget_type' => 'text_textarea',
+  );
+
+  // Exported field_instance: 'node-database-field_guide'.
+  $field_instances['node-database-field_guide'] = array(
+    'bundle' => 'database',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'node_reference',
+        'settings' => array(),
+        'type' => 'node_reference_default',
+        'weight' => 19,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_guide',
+    'label' => 'Guide',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 9,
+    ),
   );
 
   // Exported field_instance: 'node-database-field_help_guide'.
@@ -2183,6 +2269,51 @@ function opl_databases_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-item_formats-description_field'.
+  $field_instances['taxonomy_term-item_formats-description_field'] = array(
+    'bundle' => 'item_formats',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'description_field',
+    'label' => 'Description',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => -4,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-item_formats-field_database'.
   $field_instances['taxonomy_term-item_formats-field_database'] = array(
     'bundle' => 'item_formats',
@@ -2256,6 +2387,49 @@ function opl_databases_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-item_formats-name_field'.
+  $field_instances['taxonomy_term-item_formats-name_field'] = array(
+    'bundle' => 'item_formats',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
     ),
   );
 
@@ -2358,6 +2532,7 @@ function opl_databases_field_default_field_instances() {
   // Exported field_instance: 'taxonomy_term-vocabulary_21-field_term_image'.
   $field_instances['taxonomy_term-vocabulary_21-field_term_image'] = array(
     'bundle' => 'vocabulary_21',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -2382,7 +2557,7 @@ function opl_databases_field_default_field_instances() {
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'taxonomy_images',
-      'file_extensions' => 'png gif jpg jpeg',
+      'file_extensions' => 'png gif jpg jpeg svg',
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
@@ -2391,27 +2566,59 @@ function opl_databases_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'media',
       'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'image' => 'image',
+        ),
+        'browser_plugins' => array(),
         'insert' => 0,
         'insert_absolute' => 0,
         'insert_class' => '',
         'insert_default' => 'auto',
         'insert_styles' => array(
           'auto' => 'auto',
+          'colorbox__banner' => 0,
+          'colorbox__blog_event_card_image' => 0,
+          'colorbox__blog_teaser_image' => 0,
+          'colorbox__contact_icons' => 0,
+          'colorbox__event' => 0,
+          'colorbox__event_image' => 0,
+          'colorbox__event_series_image' => 0,
+          'colorbox__event_subject_for_browse' => 0,
+          'colorbox__flexslider_full' => 0,
+          'colorbox__flexslider_thumbnail' => 0,
+          'colorbox__large' => 0,
+          'colorbox__media_thumbnail' => 0,
+          'colorbox__medium' => 0,
+          'colorbox__newtitle' => 0,
+          'colorbox__opl_about_the_branch__308_x_180_' => 0,
+          'colorbox__opl_carousel_or_featured_image__350px_x_240px_' => 0,
+          'colorbox__single_event_blog_' => 0,
+          'colorbox__square_thumbnail' => 0,
+          'colorbox__thumbnail' => 0,
           'icon_link' => 0,
           'image' => 0,
+          'image_banner' => 0,
+          'image_blog_event_card_image' => 0,
           'image_blog_teaser_image' => 0,
           'image_contact_icons' => 0,
           'image_event' => 0,
           'image_event_image' => 0,
           'image_event_series_image' => 0,
           'image_event_subject_for_browse' => 0,
+          'image_flexslider_full' => 0,
+          'image_flexslider_thumbnail' => 0,
           'image_large' => 0,
+          'image_media_thumbnail' => 0,
           'image_medium' => 0,
           'image_newtitle' => 0,
           'image_opl_about_the_branch__308_x_180_' => 0,
           'image_opl_carousel_or_featured_image__350px_x_240px_' => 0,
+          'image_single_event_blog_' => 0,
           'image_square_thumbnail' => 0,
           'image_thumbnail' => 0,
           'link' => 0,
@@ -2420,8 +2627,45 @@ function opl_databases_field_default_field_instances() {
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'media_generic',
       'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-vocabulary_21-name_field'.
+  $field_instances['taxonomy_term-vocabulary_21-name_field'] = array(
+    'bundle' => 'vocabulary_21',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
     ),
   );
 
@@ -2436,11 +2680,13 @@ function opl_databases_field_default_field_instances() {
   t('Database Formats');
   t('Database Link');
   t('Database tags');
+  t('Description');
   t('Enter a brief abstract that describes this database product.');
   t('FAQ');
   t('Feature Box Image');
   t('Front Page Database');
   t('Front page');
+  t('Guide');
   t('Help guide');
   t('In library use only');
   t('Include name, email and any support portals. ');
@@ -2456,6 +2702,7 @@ function opl_databases_field_default_field_instances() {
   t('Mobile link');
   t('Mobile link - Android');
   t('Mobile link field as many databases have a different link to their app or mobile site and don\'t automatically redirect.');
+  t('Name');
   t('Note');
   t('Popular');
   t('Title');

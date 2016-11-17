@@ -13,7 +13,7 @@ function opl_databases_taxonomy_default_vocabularies() {
       'name' => 'Item formats',
       'machine_name' => 'item_formats',
       'description' => '',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'language' => 'und',

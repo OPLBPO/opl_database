@@ -42,8 +42,8 @@ function opl_databases_default_page_manager_handlers() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = '54cb90e2-9d4d-4142-b31b-fbb37f5222a5';
-  $display->storage_type = 'unknown';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'entity_panels_node_database_search_result__panel_context_16516cb0-3836-4ef6-9393-7f8abc58cb60';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -263,8 +263,8 @@ function opl_databases_default_page_manager_handlers() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = '106e860e-e684-4519-9f7a-ea2d74496c70';
-  $display->storage_type = 'unknown';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'entity_panels_node_database_teaser__panel_context_ca3c21ee-8ed3-471e-9845-2e942315eccb';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -444,10 +444,10 @@ function opl_databases_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = '%node:title_field';
   $display->uuid = '80c1d4ee-631f-4b00-9b80-2ce31e447f03';
-  $display->storage_type = 'unknown';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'node_view__panel_context_1d444265-3361-49f4-85e4-0cf1ddcff98d';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -614,42 +614,8 @@ function opl_databases_default_page_manager_handlers() {
   $pane->uuid = '6bae96fa-5789-4b68-923f-3be8f369210c';
   $display->content['new-6bae96fa-5789-4b68-923f-3be8f369210c'] = $pane;
   $display->panels['right'][1] = 'new-6bae96fa-5789-4b68-923f-3be8f369210c';
-  $pane = new stdClass();
-  $pane->pid = 'new-b3274b27-701a-421d-9756-0166992a75a8';
-  $pane->panel = 'top';
-  $pane->type = 'entity_field';
-  $pane->subtype = 'node:title_field';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'label' => 'hidden',
-    'formatter' => 'title_linked',
-    'delta_limit' => 0,
-    'delta_offset' => '0',
-    'delta_reversed' => FALSE,
-    'formatter_settings' => array(
-      'title_style' => 'h2',
-      'title_link' => '',
-      'title_class' => '',
-    ),
-    'context' => 'argument_entity_id:node_1',
-    'override_title' => 0,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'b3274b27-701a-421d-9756-0166992a75a8';
-  $display->content['new-b3274b27-701a-421d-9756-0166992a75a8'] = $pane;
-  $display->panels['top'][0] = 'new-b3274b27-701a-421d-9756-0166992a75a8';
-  $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-b3274b27-701a-421d-9756-0166992a75a8';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['node_view__panel_context_1d444265-3361-49f4-85e4-0cf1ddcff98d'] = $handler;
 
