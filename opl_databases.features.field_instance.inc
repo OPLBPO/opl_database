@@ -165,14 +165,14 @@ function opl_databases_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 42,
+      'weight' => 36,
     ),
   );
 
   // Exported field_instance: 'node-database-field_browse_local_format'.
   $field_instances['node-database-field_browse_local_format'] = array(
     'bundle' => 'database',
-    'default_value' => NULL,
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -240,8 +240,94 @@ function opl_databases_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(),
-      'type' => 'options_select',
+      'type' => 'options_buttons',
       'weight' => 39,
+    ),
+  );
+
+  // Exported field_instance: 'node-database-field_category'.
+  $field_instances['node-database-field_category'] = array(
+    'bundle' => 'database',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'database_vendor_help_guide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'database_vendor_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'colorbox_node_classes' => '',
+          'colorbox_node_height' => 600,
+          'colorbox_node_link' => FALSE,
+          'colorbox_node_width' => 600,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+      'featured_event' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_title_help' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'simple_grid_view' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_category',
+    'label' => 'Category',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'taxonomy-index' => array(
+          'status' => TRUE,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 33,
     ),
   );
 
@@ -1800,7 +1886,7 @@ function opl_databases_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 34,
+      'weight' => 35,
     ),
   );
 
@@ -1937,7 +2023,7 @@ function opl_databases_field_default_field_instances() {
     'bundle' => 'database',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'DEPRECATED -- please use the CATEGORY field (above) instead. Thank you!',
     'display' => array(
       'database_vendor_help_guide' => array(
         'label' => 'above',
@@ -1995,6 +2081,7 @@ function opl_databases_field_default_field_instances() {
         'weight' => 10,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'taxonomy_vocabulary_21',
     'label' => 'Master subject list',
@@ -2013,7 +2100,7 @@ function opl_databases_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 33,
+      'weight' => 34,
     ),
   );
 
@@ -2674,8 +2761,10 @@ function opl_databases_field_default_field_instances() {
   t(' Is this a database for the mobile site?');
   t('A title, link and description for a database project to be used on database listing pages and subject guides.');
   t('Abstract');
+  t('Category');
   t('Check yes if this database belongs in the featured list.');
   t('Choose the appropriate language if this resource is available in one language only.');
+  t('DEPRECATED -- please use the CATEGORY field (above) instead. Thank you!');
   t('Database');
   t('Database Formats');
   t('Database Link');

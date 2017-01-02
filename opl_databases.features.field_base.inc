@@ -88,6 +88,7 @@ function opl_databases_field_default_field_bases() {
         'event' => 'event',
         'database' => 'database',
         'oplpage' => 'opl page',
+        'external_event' => 'external event',
       ),
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,

@@ -213,80 +213,6 @@ function opl_databases_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'database' => 'database',
   );
-  /* Filter criterion: Content: Master subject list (taxonomy_vocabulary_21) */
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['id'] = 'taxonomy_vocabulary_21_target_id';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['table'] = 'field_data_taxonomy_vocabulary_21';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['field'] = 'taxonomy_vocabulary_21_target_id';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['value'] = array(
-    1559 => '1559',
-    250 => '250',
-    253 => '253',
-    234 => '234',
-    1560 => '1560',
-    236 => '236',
-    941 => '941',
-    259 => '259',
-    438 => '438',
-    261 => '261',
-    241 => '241',
-    256 => '256',
-    1163 => '1163',
-    258 => '258',
-    1095 => '1095',
-    244 => '244',
-    596 => '596',
-    238 => '238',
-    433 => '433',
-    243 => '243',
-    237 => '237',
-    883 => '883',
-  );
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['expose']['operator_id'] = 'taxonomy_vocabulary_21_target_id_op';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['expose']['label'] = 'Browse by subject';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['expose']['operator'] = 'taxonomy_vocabulary_21_target_id_op';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['expose']['identifier'] = 'subject';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['expose']['remember_roles'] = array(
-    2 => 0,
-    15 => 0,
-    6 => 0,
-    1 => 0,
-    24 => 0,
-    7 => 0,
-    12 => 0,
-    14 => 0,
-    16 => 0,
-    9 => 0,
-    3 => 0,
-    21 => 0,
-    20 => 0,
-    18 => 0,
-    22 => 0,
-    5 => 0,
-    26 => 0,
-    11 => 0,
-    23 => 0,
-    10 => 0,
-    19 => 0,
-    4 => 0,
-    25 => 0,
-    13 => 0,
-    8 => 0,
-    17 => 0,
-    27 => 0,
-    28 => 0,
-    29 => 0,
-  );
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['expose']['reduce'] = TRUE;
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['group_info']['label'] = 'Master subject list (taxonomy_vocabulary_21)';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['group_info']['identifier'] = 'taxonomy_vocabulary_21_target_id';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['group_info']['remember'] = FALSE;
-  $handler->display->display_options['filters']['taxonomy_vocabulary_21_target_id']['group_info']['group_items'] = array(
-    1 => array(),
-    2 => array(),
-    3 => array(),
-  );
 
   /* Display: Page -- all online resources */
   $handler = $view->new_display('page', 'Page -- all online resources', 'page');
@@ -320,6 +246,7 @@ function opl_databases_views_default_views() {
   $handler->display->display_options['title'] = 'Magazines and Newspapers';
   $handler->display->display_options['defaults']['query'] = FALSE;
   $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Sticky */
   $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
@@ -433,6 +360,79 @@ function opl_databases_views_default_views() {
 
   /* Display: Embed */
   $handler = $view->new_display('embed', 'Embed', 'embed_1');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'database' => 'database',
+  );
+  /* Filter criterion: Content: Category (field_category) */
+  $handler->display->display_options['filters']['field_category_target_id']['id'] = 'field_category_target_id';
+  $handler->display->display_options['filters']['field_category_target_id']['table'] = 'field_data_field_category';
+  $handler->display->display_options['filters']['field_category_target_id']['field'] = 'field_category_target_id';
+  $handler->display->display_options['filters']['field_category_target_id']['value'] = array(
+    1785 => '1785',
+    1786 => '1786',
+    1787 => '1787',
+    1788 => '1788',
+    1790 => '1790',
+    1792 => '1792',
+    1793 => '1793',
+    1799 => '1799',
+    1800 => '1800',
+    1802 => '1802',
+    1804 => '1804',
+    1809 => '1809',
+    1810 => '1810',
+    1811 => '1811',
+    1812 => '1812',
+    1814 => '1814',
+    1815 => '1815',
+    1817 => '1817',
+    1818 => '1818',
+    1821 => '1821',
+  );
+  $handler->display->display_options['filters']['field_category_target_id']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_category_target_id']['expose']['operator_id'] = 'field_category_target_id_op';
+  $handler->display->display_options['filters']['field_category_target_id']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['field_category_target_id']['expose']['operator'] = 'field_category_target_id_op';
+  $handler->display->display_options['filters']['field_category_target_id']['expose']['identifier'] = 'subject';
+  $handler->display->display_options['filters']['field_category_target_id']['expose']['remember_roles'] = array(
+    2 => '2',
+    15 => 0,
+    1 => 0,
+    24 => 0,
+    12 => 0,
+    14 => 0,
+    21 => 0,
+    26 => 0,
+    4 => 0,
+    17 => 0,
+    27 => 0,
+    30 => 0,
+    31 => 0,
+    33 => 0,
+    34 => 0,
+    35 => 0,
+    36 => 0,
+    37 => 0,
+    38 => 0,
+    39 => 0,
+    40 => 0,
+    41 => 0,
+    42 => 0,
+  );
+  $handler->display->display_options['filters']['field_category_target_id']['expose']['reduce'] = TRUE;
   $translatables['opl_databases_new_'] = array(
     t('Master'),
     t('Online resources'),
@@ -455,8 +455,6 @@ function opl_databases_views_default_views() {
     t('Note'),
     t('In library use only'),
     t('Licence expires'),
-    t('Browse by subject'),
-    t('Master subject list (taxonomy_vocabulary_21)'),
     t('Page -- all online resources'),
     t('more'),
     t('<p class="help-note">Need help with your eReader? <a href="http://biblioottawalibrary.ca/en/ebook-support">Visit our support page.</a></p>
@@ -469,6 +467,7 @@ function opl_databases_views_default_views() {
     t('eBooks and audiobooks'),
     t('<p class="help-note">Need help with your eReader? <a href="http://biblioottawalibrary.ca/en/ebook-support">Visit our support page.</a></p>'),
     t('Embed'),
+    t('Category'),
   );
   $export['opl_databases_new_'] = $view;
 

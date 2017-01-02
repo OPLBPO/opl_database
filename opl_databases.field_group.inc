@@ -21,7 +21,7 @@ function opl_databases_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Title / Description',
-    'weight' => '0',
+    'weight' => '1',
     'children' => array(
       0 => 'body',
       1 => 'field_db_abstract',
@@ -76,6 +76,33 @@ function opl_databases_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_databases|taxonomy_term|item_formats|form';
+  $field_group->group_name = 'group_databases';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'item_formats';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Database(s)',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_database',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-databases field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_databases|taxonomy_term|item_formats|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_faq|taxonomy_term|item_formats|form';
   $field_group->group_name = 'group_faq';
   $field_group->entity_type = 'taxonomy_term';
@@ -111,7 +138,7 @@ function opl_databases_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Images / Files',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_image_feature_box',
     ),
@@ -130,6 +157,33 @@ function opl_databases_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_item_formats|node|database|form';
+  $field_group->group_name = 'group_item_formats';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'database';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Item Formats',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_browse_local_format',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-item-formats field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_item_formats|node|database|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_links|node|database|form';
   $field_group->group_name = 'group_links';
   $field_group->entity_type = 'node';
@@ -138,7 +192,7 @@ function opl_databases_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Links: DB & Help Guides',
-    'weight' => '2',
+    'weight' => '4',
     'children' => array(
       0 => 'field_database_link',
       1 => 'field_help_guide',
@@ -167,7 +221,7 @@ function opl_databases_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Mobile Links / Details',
-    'weight' => '3',
+    'weight' => '5',
     'children' => array(
       0 => 'field_is_mobile',
       1 => 'field_mobile_description',
@@ -197,14 +251,14 @@ function opl_databases_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Terms / Descriptors',
-    'weight' => '5',
+    'weight' => '9',
     'children' => array(
       0 => 'taxonomy_vocabulary_30',
       1 => 'taxonomy_vocabulary_38',
       2 => 'taxonomy_vocabulary_21',
       3 => 'field_unilingual_resource',
-      4 => 'field_browse_local_format',
-      5 => 'field_browse_items_catagory',
+      4 => 'field_browse_items_catagory',
+      5 => 'field_category',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -229,7 +283,7 @@ function opl_databases_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Vendor, License and Usage Details',
-    'weight' => '4',
+    'weight' => '7',
     'children' => array(
       0 => 'field_resource_in_library',
       1 => 'field_vendor_contact',
@@ -250,8 +304,10 @@ function opl_databases_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Database(s)');
   t('FAQs / Help Guides');
   t('Images / Files');
+  t('Item Formats');
   t('Links: DB & Help Guides');
   t('Mobile Links / Details');
   t('Name / Description');

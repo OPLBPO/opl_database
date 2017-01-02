@@ -13,7 +13,7 @@ function opl_databases_taxonomy_default_vocabularies() {
       'name' => 'Item formats',
       'machine_name' => 'item_formats',
       'description' => '',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
       'language' => 'und',
@@ -38,11 +38,11 @@ function opl_databases_taxonomy_default_vocabularies() {
       'name' => 'Master subject list',
       'machine_name' => 'vocabulary_21',
       'description' => 'Master subject list',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
-      'language' => '',
-      'i18n_mode' => 1,
+      'language' => 'und',
+      'i18n_mode' => 4,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
