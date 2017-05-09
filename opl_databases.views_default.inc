@@ -172,12 +172,6 @@ function opl_databases_views_default_views() {
   $handler->display->display_options['fields']['field_resource_in_library']['table'] = 'field_data_field_resource_in_library';
   $handler->display->display_options['fields']['field_resource_in_library']['field'] = 'field_resource_in_library';
   $handler->display->display_options['fields']['field_resource_in_library']['element_label_colon'] = FALSE;
-  /* Field: Content: Unilingual resource */
-  $handler->display->display_options['fields']['field_unilingual_resource']['id'] = 'field_unilingual_resource';
-  $handler->display->display_options['fields']['field_unilingual_resource']['table'] = 'field_data_field_unilingual_resource';
-  $handler->display->display_options['fields']['field_unilingual_resource']['field'] = 'field_unilingual_resource';
-  $handler->display->display_options['fields']['field_unilingual_resource']['label'] = '';
-  $handler->display->display_options['fields']['field_unilingual_resource']['element_label_colon'] = FALSE;
   /* Field: Content: Licence expires */
   $handler->display->display_options['fields']['field_licence_expires']['id'] = 'field_licence_expires';
   $handler->display->display_options['fields']['field_licence_expires']['table'] = 'field_data_field_licence_expires';
@@ -360,6 +354,21 @@ function opl_databases_views_default_views() {
 
   /* Display: Embed */
   $handler = $view->new_display('embed', 'Embed', 'embed_1');
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['defaults']['cache'] = FALSE;
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['defaults']['exposed_form'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Sticky */
+  $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['table'] = 'node';
+  $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
+  /* Sort criterion: Content: Title (title_field) */
+  $handler->display->display_options['sorts']['title_field_value']['id'] = 'title_field_value';
+  $handler->display->display_options['sorts']['title_field_value']['table'] = 'field_data_title_field';
+  $handler->display->display_options['sorts']['title_field_value']['field'] = 'title_field_value';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -381,6 +390,7 @@ function opl_databases_views_default_views() {
   $handler->display->display_options['filters']['field_category_target_id']['table'] = 'field_data_field_category';
   $handler->display->display_options['filters']['field_category_target_id']['field'] = 'field_category_target_id';
   $handler->display->display_options['filters']['field_category_target_id']['value'] = array(
+    1782 => '1782',
     1785 => '1785',
     1786 => '1786',
     1787 => '1787',
@@ -433,6 +443,105 @@ function opl_databases_views_default_views() {
     42 => 0,
   );
   $handler->display->display_options['filters']['field_category_target_id']['expose']['reduce'] = TRUE;
+  /* Filter criterion: Content: Title (title_field:language) */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'field_data_title_field';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
+
+  /* Display: homepage block */
+  $handler = $view->new_display('block', 'homepage block', 'block_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'masonry home-item';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['wrapper_class'] = '';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Flags: bookmarks */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'bookmarks';
+  /* Relationship: Entityqueue: Content Queue */
+  $handler->display->display_options['relationships']['entityqueue_relationship']['id'] = 'entityqueue_relationship';
+  $handler->display->display_options['relationships']['entityqueue_relationship']['table'] = 'node';
+  $handler->display->display_options['relationships']['entityqueue_relationship']['field'] = 'entityqueue_relationship';
+  $handler->display->display_options['relationships']['entityqueue_relationship']['limit'] = 1;
+  $handler->display->display_options['relationships']['entityqueue_relationship']['queues'] = array(
+    'home_page_databases' => 'home_page_databases',
+    'featured_blogs' => 0,
+    'kids_databases' => 0,
+  );
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Database Link */
+  $handler->display->display_options['fields']['field_database_link']['id'] = 'field_database_link';
+  $handler->display->display_options['fields']['field_database_link']['table'] = 'field_data_field_database_link';
+  $handler->display->display_options['fields']['field_database_link']['field'] = 'field_database_link';
+  $handler->display->display_options['fields']['field_database_link']['label'] = '';
+  $handler->display->display_options['fields']['field_database_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_database_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_database_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_database_link']['type'] = 'link_plain';
+  /* Field: Content: Feature Box Image */
+  $handler->display->display_options['fields']['field_image_feature_box']['id'] = 'field_image_feature_box';
+  $handler->display->display_options['fields']['field_image_feature_box']['table'] = 'field_data_field_image_feature_box';
+  $handler->display->display_options['fields']['field_image_feature_box']['field'] = 'field_image_feature_box';
+  $handler->display->display_options['fields']['field_image_feature_box']['label'] = '';
+  $handler->display->display_options['fields']['field_image_feature_box']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_image_feature_box']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image_feature_box']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image_feature_box']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
+  $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
+  $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
+  $handler->display->display_options['fields']['title_field']['label'] = '';
+  $handler->display->display_options['fields']['title_field']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title_field']['type'] = 'title_linked';
+  $handler->display->display_options['fields']['title_field']['settings'] = array(
+    'title_style' => '_none',
+    'title_link' => 'content',
+    'title_class' => '',
+  );
+  $handler->display->display_options['fields']['title_field']['link_to_entity'] = 1;
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'database' => 'database',
+  );
+  /* Filter criterion: Entityqueue: Content In Queue */
+  $handler->display->display_options['filters']['entityqueue_relationship']['id'] = 'entityqueue_relationship';
+  $handler->display->display_options['filters']['entityqueue_relationship']['table'] = 'node';
+  $handler->display->display_options['filters']['entityqueue_relationship']['field'] = 'entityqueue_relationship';
+  $handler->display->display_options['filters']['entityqueue_relationship']['value'] = '1';
+  $handler->display->display_options['block_description'] = 'homepage database block';
   $translatables['opl_databases_new_'] = array(
     t('Master'),
     t('Online resources'),
@@ -443,7 +552,6 @@ function opl_databases_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Advanced options'),
-    t('Select any filter and click on Apply to see results'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),
@@ -467,7 +575,12 @@ function opl_databases_views_default_views() {
     t('eBooks and audiobooks'),
     t('<p class="help-note">Need help with your eReader? <a href="http://biblioottawalibrary.ca/en/ebook-support">Visit our support page.</a></p>'),
     t('Embed'),
+    t('Apply'),
+    t('Reset'),
     t('Category'),
+    t('homepage block'),
+    t('Content Queue'),
+    t('homepage database block'),
   );
   $export['opl_databases_new_'] = $view;
 

@@ -388,35 +388,6 @@ function opl_databases_field_default_field_bases() {
     'type_name' => 'database_description',
   );
 
-  // Exported field_base: 'field_is_mobile'.
-  $field_bases['field_is_mobile'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_is_mobile',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'Yes' => 'Yes',
-        'No' => 'No',
-      ),
-      'allowed_values_function' => '',
-      'allowed_values_php' => '',
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 0,
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
-    'type_name' => 'database_description',
-  );
-
   // Exported field_base: 'field_licence_expires'.
   $field_bases['field_licence_expires'] = array(
     'active' => 1,
@@ -446,125 +417,6 @@ function opl_databases_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'datetime',
-  );
-
-  // Exported field_base: 'field_mobile_description'.
-  $field_bases['field_mobile_description'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_mobile_description',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'allowed_values' => '',
-      'allowed_values_php' => '',
-      'entity_translation_sync' => FALSE,
-      'max_length' => '',
-      'text_processing' => 0,
-    ),
-    'translatable' => 1,
-    'type' => 'text_long',
-    'type_name' => 'database_description',
-  );
-
-  // Exported field_base: 'field_mobile_link'.
-  $field_bases['field_mobile_link'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_mobile_link',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'link',
-    'settings' => array(
-      'attributes' => array(
-        'class' => '',
-        'rel' => '',
-        'target' => 'default',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'entity_translation_sync' => FALSE,
-      'title' => 'optional',
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-    ),
-    'translatable' => 0,
-    'type' => 'link_field',
-    'type_name' => 'database_description',
-  );
-
-  // Exported field_base: 'field_mobile_link_android'.
-  $field_bases['field_mobile_link_android'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_mobile_link_android',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'link',
-    'settings' => array(
-      'attributes' => array(
-        'class' => '',
-        'rel' => '',
-        'target' => 'default',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'entity_translation_sync' => FALSE,
-      'profile2_private' => FALSE,
-      'title' => 'optional',
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-    ),
-    'translatable' => 0,
-    'type' => 'link_field',
-  );
-
-  // Exported field_base: 'field_popular_db'.
-  $field_bases['field_popular_db'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_popular_db',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => 0,
-        1 => 1,
-        'no' => 'no',
-        'yes' => 'yes',
-      ),
-      'allowed_values_function' => '',
-      'allowed_values_php' => '',
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 0,
-    ),
-    'translatable' => 0,
-    'type' => 'list_boolean',
-    'type_name' => 'database_description',
   );
 
   // Exported field_base: 'field_resource_in_library'.
@@ -620,33 +472,6 @@ function opl_databases_field_default_field_bases() {
     'translatable' => 1,
     'type' => 'text',
     'type_name' => 'database_description',
-  );
-
-  // Exported field_base: 'field_unilingual_resource'.
-  $field_bases['field_unilingual_resource'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_unilingual_resource',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'en' => 'en anglais seulement',
-        'fr' => 'in French only',
-      ),
-      'allowed_values_function' => '',
-      'entity_translation_sync' => FALSE,
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_vendor_contact'.
